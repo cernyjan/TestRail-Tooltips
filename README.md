@@ -14,7 +14,7 @@ After add-on:
 * bumped version
 
 ## Add-on for FireFox
-[TestRail TestCasesCount v1.0](https://addons.mozilla.org/en-US/firefox/addon/testrail-tooltips/)
+[TestRail Tooltips v1.0](https://addons.mozilla.org/en-US/firefox/addon/testrail-tooltips/)
 
 ## Add-on for Chrome
 * download file [TestRail Tooltips v1.0](https://github.com/cernyjan/TestRail-Tooltips/blob/master/testrail_tooltips-1.0-an+fx.xpi)
