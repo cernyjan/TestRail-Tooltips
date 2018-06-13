@@ -5,16 +5,26 @@ $( document ).ready(function() {
 	{
 		console.log("TestRail Tooltips is Online");
 
-		$('#groups').find('table').find('td').each(function( index ) {
-		    if ($( this ).hasClass( "id" )){
-		        $( this ).attr('title', $( this ).find('a').html());
-		    }
-		    else if ($( this ).hasClass( "sub" )){
-		        $( this ).attr('title', $( this ).html());
-		    }
-			else{
-				$( this ).attr('title', $( this ).find('span').html());
-			}
-		});	
+		function iteration() {
+		    myVar = setInterval(checkTooltip, 1000);
+		}
+
+		function checkTooltip() {
+			if ($('#groups').find('table').find('td').first().next().next().not('[title]').length > 0){
+			    $('#groups').find('table').find('td').each(function( index ) {
+				    if ($( this ).hasClass( "id" )){
+				        $( this ).attr('title', $( this ).find('a').html());
+				    }
+				    else if ($( this ).hasClass( "sub" )){
+				        $( this ).attr('title', $( this ).html());
+				    }
+					else if ($( this ).not('[class]')){
+						$( this ).attr('title', $( this ).find('span').html());
+					}
+				});
+			}	
+		}
+
+		iteration();
 	}
 });
